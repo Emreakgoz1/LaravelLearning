@@ -17,3 +17,18 @@ use App\Http\Controllers\EmreController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/ilkroutedenemem', function () {
+    return 'ilk route denemem';
+});
+Route::get('/hakkimdatest', function () {
+    return 'Merhaba ben Emre Akgöz';
+});
+Route::get('/iletişimtest', function () {
+    return 'merhabalar ben Emre Akgöz';
+});
+Route::get('/hakkimdaviewtest', function () {
+    return view('sayfa.hakkimda');
+});
+Route::get('/iletişimviewtest', function () {
+    return view('sayfa.iletisim');
+});
