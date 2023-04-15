@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmreController;
+use App\Http\Controllers\SayfalarController;
 use App\Http\Controllers\UyelerController;
 
 /*
@@ -119,3 +120,31 @@ Route::resource("uyeler", UyelerController::class);
 
 
 //php artisan route:list ile terminalerden routelar ve işlemleri görebilirsinç.
+
+//view örnekleri
+
+Route::get("/emre", function () {
+    return view("sayfa.emre");
+});
+
+
+//View içerisine dizi ile  Veri gönderme
+
+Route::get("/emre2", function () {
+    return view("sayfa.emre2", ["isim" => "emre", "soyisim" => "akgoz"]);
+});
+
+
+//View içerisine Controllerdan Veri Gönderme
+
+Route::get("/emre3", [SayfalarController::class, "emre3"]);
+
+//View içerisine compact ile Veri Gönderme
+
+Route::get("/emre4", [SayfalarController::class, "emre4"]);
+
+//View içerisine compact ile Dizi gönderme
+Route::get("/emre4", [SayfalarController::class, "emre5"]);
+
+//View içerisine with ile veri gönderme
+Route::get("/emre5", [SayfalarController::class, "emre6"]);

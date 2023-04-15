@@ -1,0 +1,1 @@
+{{ $isim }} -- {{$soyisim}} <br>
