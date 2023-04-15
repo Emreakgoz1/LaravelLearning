@@ -152,5 +152,28 @@ Route::get("/emre5", [SayfalarController::class, "emre6"]);
 //Laravel Katmanlar
 
 Route::get('/', function () {
-    return View('anasayfa');
+    return view('anasayfa');
+});
+
+Route::get('ifelse', function () {
+    return view('blade-directives.if-else');
+});
+
+Route::get('switch-case', function () {
+    return view('blade-directives.switch-case');
+});
+Route::get('for', function () {
+    return view('blade-directives.for');
+});
+Route::get('foreach', function () {
+    return view('blade-directives.foreach');
+});
+Route::get('while', function () {
+    return view('blade-directives.while');
+});
+Route::get('include', function () {
+    return view('blade-directives.include');
+});
+Route::get('url', function () {
+    return view('blade-directives.url');
 });
