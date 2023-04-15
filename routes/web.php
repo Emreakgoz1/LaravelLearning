@@ -148,3 +148,9 @@ Route::get("/emre4", [SayfalarController::class, "emre5"]);
 
 //View içerisine with ile veri gönderme
 Route::get("/emre5", [SayfalarController::class, "emre6"]);
+
+//Laravel Katmanlar
+
+Route::get('/', function () {
+    return View('anasayfa');
+});
