@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmreController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\SayfalarController;
 use App\Http\Controllers\UyelerController;
 
@@ -177,3 +178,16 @@ Route::get('include', function () {
 Route::get('url', function () {
     return view('blade-directives.url');
 });
+
+//Veri listeleme için veriListesi route olusturuyoruz.
+Route::get("/", [PostController::class, "veriListesi"]);
+//Veri ekleme için route işlemi
+Route::get("/ekle", [PostController::class, "veriEkle"]);
+//Veri güncelleme için route işlemi
+Route::get("guncelle", [PostController::class, "veriGuncelle"]);
+//Veri silme için route işlemi
+Route::Get("sil", [PostController::class, "veriSil"]);
+//statement için route işlemi
+Route::get("bosalt", [PostController::class, "veriTemizle"]);
+//tablo silmek için route işlemi
+Route::get("tablosil", [PostController::class], "tabloSil");
