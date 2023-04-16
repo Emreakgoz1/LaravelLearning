@@ -7,3 +7,11 @@
     Soyİsim: {{$veri->$soyisim}} <br>
     
 @endforeach
+@php
+    //Eloquentin select sorgusundan donen post degerini burada döndürdük
+@endphp
+@foreach ($post as $p)
+    İsim : {{$p->$isim}} <br>
+    Soyİsim: {{$p->$soyisim}} <br>
+    
+@endforeach

@@ -190,4 +190,22 @@ Route::Get("sil", [PostController::class, "veriSil"]);
 //statement için route işlemi
 Route::get("bosalt", [PostController::class, "veriTemizle"]);
 //tablo silmek için route işlemi
-Route::get("tablosil", [PostController::class], "tabloSil");
+Route::get("tablosil", [PostController::class, "tabloSil"]);
+//Eloquent veri ekleme route işlemi
+Route::get("EloquentInsert1", [PostController::class, "EloquentInsert1"]);
+//Eloquent veri ekleme2 route işlemi
+Route::get("EloquentInsert2", [PostController::class, "EloquentInsert2"]);
+//Eloquent veri listeleme route işlemi
+Route::get("EloquentSelect", [PostController::class, "EloquentSelect"]);
+//eloquent veri listeleme2 route işlem
+Route::get("EloquentSelectAll", [PostController::class, "EloquentSelectAll"]);
+//eloquent veri listeleme where ile
+Route::get("EloquentSelectWhere", [PostController::class, "EloquentSelectWhere"]);
+//eloquent veri günelleme
+Route::get("EloquentVeriGuncelleme", [PostController::class, "EloquentVeriGuncelleme"]);
+//eloquent toplu veri güncelleme
+Route::get("EloquentVeriSilme", [PostController::class, "EloquentVeriSilme"]);
+//eloquent veri silme
+Route::get("EloquentVeriSilme", [PostController::class, "EloquentVeriSilme"]);
+//eloquent toplu veri silme
+Route::get("EloquentTopluVeriSilme", [PostController::class, "EloquentTopluVeriSilme"]);
